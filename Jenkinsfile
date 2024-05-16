@@ -22,7 +22,7 @@ pipeline {
                dir('demo0905') {
                    //bat 'java -jar -Dserver.port=8083 target/springcoreddemo-0.0.1-SNAPSHOT.jar'
 			//bat 'start java -jar -Dserver.port=8083 target/springcoreddemo-0.0.1-SNAPSHOT.jar'
-			bat 'scp target/springcoreddemo-0.0.1-SNAPSHOT.jar ubuntu@192.168.52.135:/home/ubuntu/Jenkins'
+			bat 'scp -i ssh -i C:\Users\DELL\.ssh\id_rsa target/springcoreddemo-0.0.1-SNAPSHOT.jar ubuntu@192.168.52.135:/home/ubuntu/Jenkins'
                }
             }
         }
