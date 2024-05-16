@@ -21,7 +21,8 @@ pipeline {
              steps {
                dir('demo0905') {
                    //bat 'java -jar -Dserver.port=8083 target/springcoreddemo-0.0.1-SNAPSHOT.jar'
-			bat 'start java -jar -Dserver.port=8083 target/springcoreddemo-0.0.1-SNAPSHOT.jar'
+			//bat 'start java -jar -Dserver.port=8083 target/springcoreddemo-0.0.1-SNAPSHOT.jar'
+			scp target/springcoreddemo-0.0.1-SNAPSHOT.jar ubuntu@192.168.52.135:/home/ubuntu/Jenkins
                }
             }
         }
