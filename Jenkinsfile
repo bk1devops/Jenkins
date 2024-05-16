@@ -15,8 +15,9 @@ pipeline {
         stage('Build') {
             steps {
                 dir('demo0905') {
+			sh 'mvn clean package'
                     // Run nvm package command
-                   bat '"C:\\Program Files\\maven\\apache-maven-3.9.6\\bin\\mvn" clean package'
+                   //bat '"C:\\Program Files\\maven\\apache-maven-3.9.6\\bin\\mvn" clean package'
 			 //bat '"C:\\Program Files\\Marven\\bin\\mvn" clean package'
                 }
             }
